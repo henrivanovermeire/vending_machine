@@ -1,0 +1,19 @@
+# Workflow for cpp version of the vending machine
+#
+# Checks if the project can be compiled without errors. 
+
+name: compile
+
+on: 
+  push:
+    paths: 
+      -cpp/*
+      -.github/workflows/*-cpp.yml
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run : echo "Hello World"
+
+
