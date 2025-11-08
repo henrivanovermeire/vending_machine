@@ -17,9 +17,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
 
-      - name: setup venv
-        working-directory: python/src
-        run : sudo python3 -m venv .venv && sudo .venv/bin/activate && pip install -r requirements.txt 
+      - name: install requirements
+        working-directory: python
+        run : pip install -r requirements.txt
       
       - name: Run unit tests using pytest
         working-directory: python
