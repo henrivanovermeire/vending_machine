@@ -2,5 +2,5 @@
 
 int main() {
 	printf("Vending machine activated!");
-	return 1;
+	return 0;
 }
