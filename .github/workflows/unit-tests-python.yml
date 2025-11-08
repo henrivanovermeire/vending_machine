@@ -7,8 +7,8 @@ name: compile
 on: 
   push:
     paths: 
-      - 'python/*'
-      - '.github/workflows/**-cpp.yml'
+      - 'python/**'
+      - '.github/workflows/**-python.yml'
 
 jobs:
   test:
