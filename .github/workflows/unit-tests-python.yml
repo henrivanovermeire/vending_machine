@@ -1,0 +1,28 @@
+# Workflow for cpp version of the vending machine
+#
+# Checks if the project can be compiled without errors. 
+
+name: compile
+
+on: 
+  push:
+    paths: 
+      - 'python/*'
+      - '.github/workflows/**-cpp.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: setup venv
+        working-directory: python/src
+        run : python3-m venv .venv && .venv/bin/activate && pip install -r requirements.txt 
+      
+      - name: Run unit tests using pytest
+        working-directory: python
+        run : pytest
+
+
