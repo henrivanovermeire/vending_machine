@@ -7,8 +7,8 @@ name: compile
 on: 
   push:
     paths: 
-      -cpp/*
-      -.github/workflows/*-cpp.yml
+      - cpp/*
+      - .github/workflows
 
 jobs:
   test:
