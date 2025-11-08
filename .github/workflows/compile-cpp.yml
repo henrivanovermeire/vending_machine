@@ -19,7 +19,7 @@ jobs:
 
       - name: Compile source code using gcc
         working-directory: cpp
-        run : cd cpp && gcc vending_machine.cpp 
+        run : gcc vending_machine.cpp 
       
       - name: Run compiled program
         working-directory: cpp
