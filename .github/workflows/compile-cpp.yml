@@ -17,7 +17,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
 
-      - name: List files for compiling
-        run : cd cpp && gcc vending_machine.cpp && ./a.out
+      - name: Compile source code using gcc
+        run : cd cpp && gcc vending_machine.cpp 
+      
+      - name: Run compiled program
+        run : ./a.out
 
 
