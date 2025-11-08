@@ -1,4 +1,4 @@
-from ..src.vending_machine import VendingMachine
+from ..vending_machine import VendingMachine
 
 def test_create_empty_machine():
 	machine = VendingMachine()
