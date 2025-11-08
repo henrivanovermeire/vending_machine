@@ -30,7 +30,7 @@ class VendingMachine:
         self.inserted_amount = 0
         self.item_grid = ItemGrid([])
         if initial_state is not None:
-            for item in initialstate:
+            for item in initial_state:
                 print(item)
 
     def add_item(self, item):
