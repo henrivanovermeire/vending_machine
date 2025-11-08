@@ -1,7 +1,6 @@
-#! ./.venv/bin/python3 
-
 import os
 import time
+import json
 
 class Item:
     def __init__(self, item_name, item_price):
@@ -27,9 +26,12 @@ class ItemGrid:
 class VendingMachine:
     inserted_amount = 0
 
-    def __init__(self):
+    def __init__(self, initial_state = None):
         self.inserted_amount = 0
         self.item_grid = ItemGrid([])
+        if initial_state is not None:
+            for item in initialstate:
+                print(item)
 
     def add_item(self, item):
         self.item_grid.items.append(ItemSlot(item))
@@ -81,7 +83,7 @@ class VendingMachine:
             self.clear_screen()
 
 def main():
-    machine = VendingMachine()
+    machine = VendingMachine(["Hello", "Vending Machine!"])
     cola = Item("coca_cola", 1.50)
     fanta = Item("fanta", 2.00)
     machine.add_item(cola)
