@@ -2,6 +2,7 @@ import os
 import time
 import json
 
+
 class Item:
     def __init__(self, item_name, item_price):
         self.name = item_name
@@ -26,7 +27,7 @@ class ItemGrid:
 class VendingMachine:
     inserted_amount = 0
 
-    def __init__(self, initial_state = None):
+    def __init__(self, initial_state=None):
         self.inserted_amount = 0
         self.item_grid = ItemGrid([])
         if initial_state is not None:
@@ -47,8 +48,10 @@ class VendingMachine:
             return False
         else:
             return True
+
     def checkout(self, item):
-        self.inserted_amount -= item.price 
+        self.inserted_amount -= item.price
+
     def clear_screen(self):
         os.system("clear")
 
@@ -74,13 +77,14 @@ class VendingMachine:
                     self.checkout(item)
                     print("Thank you for your order!")
                     time.sleep(2)
-                else: 
+                else:
                     print("INSUFFICIENT BALANCE!")
                     time.sleep(1)
             else:
                 print("THIS COMMAND IS NOT RECOGNIZED")
                 time.sleep(0.5)
             self.clear_screen()
+
 
 def main():
     machine = VendingMachine(["Hello", "Vending Machine!"])
