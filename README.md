@@ -3,4 +3,4 @@
 This project serves as a sandbox to experiment with new programming languages in a structured way. 
 The goal is always to be able to reproduce the original vending machines behaviour. 
 
-Test-driven development is encouraged; CI/CD setup is underway. 
+Test-driven development is encouraged; CI/CD setup with GitHub Actions is underway. 
